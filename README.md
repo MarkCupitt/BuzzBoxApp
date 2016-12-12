@@ -4,6 +4,8 @@ for development:
 
 `npm start`
 
-for production build:
+to deploy site to [github](https://opensourcebeehives.github.io/BuzzBoxApp/)
 
-`npm run build`
+`npm run deploy`
+
+
