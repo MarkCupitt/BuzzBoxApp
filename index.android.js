@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 
-class BuzzBox extends Component {
+export default class BuzzBoxApp extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('BuzzBox', () => BuzzBox);
+AppRegistry.registerComponent('BuzzBoxApp', () => BuzzBoxApp);
