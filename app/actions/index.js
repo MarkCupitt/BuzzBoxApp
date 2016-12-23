@@ -6,4 +6,8 @@ export function incInit() {
 
 export function incLogin() {
   return {type: types.INC_LOGIN};
-}
+};
+
+export function incRegisterUser() {
+  return {type: types.INC_REGISTER_USER};
+};

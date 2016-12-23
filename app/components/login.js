@@ -52,7 +52,6 @@ export default class Login extends React.Component {
               <ButtonRounded text="Login" style={buttonRounded.loginButton} onPress={()=>Actions.login()} />
             </View>
             <View style={login.buttonButtom}>
-              <Text s
             </View>
           </View>
         </Image>
