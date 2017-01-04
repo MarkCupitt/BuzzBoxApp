@@ -19,6 +19,27 @@ function register_user(state, action) {
   if (state == undefined) {
     return 0;
   }
+  return (state + 2);
+}
+
+function register_hive(state, action) {
+  if (state == undefined) {
+    return 0;
+  }
+  return (state + 2);
+}
+
+function events(state, action) {
+  if (state == undefined) {
+    return 0;
+  }
+  return (state + 3);
+}
+
+function hive_data(state, action) {
+  if (state == undefined) {
+    return 0;
+  }
   return (state + 3);
 }
 
@@ -26,4 +47,7 @@ export default combineReducers({
   init,
   login,
   register_user,
+  register_hive,
+  events,
+  hive_data,
 });

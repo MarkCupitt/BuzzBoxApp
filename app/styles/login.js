@@ -62,20 +62,46 @@ module.exports = StyleSheet.create({
 		marginBottom: 40
 	},
 	buttons: {
-		flexGrow: 1.5,
+		flexGrow: 1,
 		flexDirection: 'column',
+		marginTop: 30,
 		alignItems: 'center',
+		justifyContent: 'center',
 		// backgroundColor: '#44ee55'
 	},
 	buttonTop: {
-		flexGrow: 1,
+		flexGrow: 3,
 		flexDirection: 'row',
+		width: 280,
 		alignItems: 'center',
+	},
+	buttonTopLeft: {
+		flexGrow: 5,
+		flexDirection: 'row',
+		// alignItems: 'flex-start'
 	},
 	check: {
 		backgroundColor: '#0045ff',
 		color: '#fff',
 		borderRadius: 5,
+	},
+	buttonTopRight: {
+		flexGrow: 5,
+		alignItems: 'flex-end',
+	},
+	forgotPassword: {
+		color: '#0045ff'
+	},
+	button: {
+		flexGrow: 3,
+	},
+	buttonBottom: {
+		flexGrow: 3,
+		width: 280,
+		alignItems: 'flex-start'
+	},
+	registerText: {
+		color: '#0045ff',
 	},
 	textInput: {
 		color: '#fff',
@@ -83,5 +109,8 @@ module.exports = StyleSheet.create({
 		marginRight: 50,
 		height: 55,
 		textAlign: 'center'
+	},
+	remainings: {
+		flexGrow: 4,
 	}
 });

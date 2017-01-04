@@ -12,7 +12,11 @@ export default class Init extends React.Component {
 
   componentDidMount(){
     setTimeout(() => {
-      Actions.login();
+      // Actions.login();
+      // Actions.register_user();
+      // Actions.register_hive();
+      // Actions.events();
+      Actions.hive_data();
     }, 50);
   }
 

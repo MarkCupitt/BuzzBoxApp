@@ -1,17 +1,17 @@
 
 import React from 'react'
 import {connect} from 'react-redux'
-import {incLogin} from '../actions/'
-import Login from '../components/login'
+import {incEvents} from '../actions/'
+import Events from '../components/events'
 
 let mapStateToProps = (state) => {
-  return {data: state.login};
+  return {data: state.events};
 };
 
 let mapDispatchToProps = (dispatch) => {
   return {
-    incLogin: () => {
-      dispatch(incLogin())
+    incEvents: () => {
+      dispatch(incEvents())
     }
   };
 }
@@ -19,4 +19,4 @@ let mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Login);
+)(Events);

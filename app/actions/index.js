@@ -11,3 +11,15 @@ export function incLogin() {
 export function incRegisterUser() {
   return {type: types.INC_REGISTER_USER};
 };
+
+export function incRegisterHive() {
+  return {type: types.INC_REGISTER_HIVE};
+};
+
+export function incEvents() {
+  return {type: types.INC_EVENTS};
+};
+
+export function incHiveData() {
+  return {type: types.INC_HIVE_DATA};
+};

@@ -1,17 +1,17 @@
 
 import React from 'react'
 import {connect} from 'react-redux'
-import {incLogin} from '../actions/'
-import Login from '../components/login'
+import {incHiveData} from '../actions/'
+import HiveData from '../components/hive_data'
 
 let mapStateToProps = (state) => {
-  return {data: state.login};
+  return {data: state.hive_data};
 };
 
 let mapDispatchToProps = (dispatch) => {
   return {
-    incLogin: () => {
-      dispatch(incLogin())
+    incHiveData: () => {
+      dispatch(incHiveData())
     }
   };
 }
@@ -19,4 +19,4 @@ let mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Login);
+)(HiveData);

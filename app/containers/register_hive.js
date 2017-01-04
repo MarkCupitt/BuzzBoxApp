@@ -1,17 +1,17 @@
 
 import React from 'react'
 import {connect} from 'react-redux'
-import {incLogin} from '../actions/'
-import Login from '../components/login'
+import {incRegisterHive} from '../actions/'
+import RegisterHive from '../components/register_hive'
 
 let mapStateToProps = (state) => {
-  return {data: state.login};
+  return {data: state.register_hive};
 };
 
 let mapDispatchToProps = (dispatch) => {
   return {
-    incLogin: () => {
-      dispatch(incLogin())
+    incRegisterHive: () => {
+      dispatch(incRegisterHive())
     }
   };
 }
@@ -19,4 +19,4 @@ let mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Login);
+)(RegisterHive);
