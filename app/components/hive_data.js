@@ -10,16 +10,53 @@ import buttonRounded from '../styles/buttonRounded'
 import ButtonRounded from '../widgets/ButtonRounded'
 import AnimInput from '../widgets/AnimInput'
 import CheckBox from 'react-native-custom-checkbox'
+import AreaSpline from '../widgets/AreaSpline'
+import Theme from '../widgets/Theme'
+import data from '../resources/data'
+
+type State = {
+  activeIndex: number,
+  hiveData: any
+}
 
 export default class HiveData extends React.Component {
+  
+  state: State;
+
   constructor(props) {
     super(props);
+    this.state = {
+      activeIndex: 0,
+      hiveData: data.hiveData[1],
+      tempInStatus: false,
+      humidInStatus: false,
+      tempOutStatus: false,
+      humidOutStatus: false,
+      baroPressStatus: false,
+      accelStatus: false,
+      decibelStatus: false,
+      batteryStatus: false
+
+    };
+    this._shuffle = this._shuffle.bind(this);
+  }
+
+  toggleStatus
+  _shuffle(a) {
+    for (let i = a.length; i; i--) {
+        let j = Math.floor(Math.random() * i);
+        [a[i - 1], a[j]] = [a[j], a[i - 1]];
+    }
+    return a;
   }
 
   render() {
+    const height = 250;
+    const width = 450;
+
     return (
       <View style={styles.container}>
-        <Image style={styles.bg} source={require('../assets/bg4.jpg')} resizeMode='stretch'>
+        <Image style={styles.bg} resizeMode='stretch'>
           <View style={styles.header}>
             <View style={styles.headerLeft}>
               <Icon name="envelope-o" size={20} color="#0045ff">
@@ -36,6 +73,7 @@ export default class HiveData extends React.Component {
             <Text style={styles.titleText}>[Beehive 01] Data</Text>
           </View>
           <View style={styles.graphArea}>
+            <AreaSpline width={width} height={height} data={this.state.hiveData} color={Theme.colors[this.state.activeIndex]} />
           </View>
           <View style={styles.parameterCheckbox}>
             <View style={styles.checkboxTop}>

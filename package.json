@@ -7,10 +7,18 @@
     "test": "jest"
   },
   "dependencies": {
+    "art": "^0.10.1",
     "color": "^1.0.3",
+    "d3": "^4.4.0",
+    "d3-axis": "^1.0.4",
+    "d3-format": "^1.0.2",
+    "d3-scale": "^1.0.4",
+    "d3-shape": "^1.0.4",
+    "native-base": "^0.5.20",
     "react": "15.4.1",
     "react-native": "0.39.2",
     "react-native-checkbox": "^1.1.0",
+    "react-native-custom-checkbox": "^1.5.0",
     "react-native-router-flux": "^3.37.0",
     "react-native-textinput-effects": "^0.3.0",
     "react-native-vector-icons": "^3.0.0",
