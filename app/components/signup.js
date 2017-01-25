@@ -3,7 +3,7 @@ import React from 'react'
 import {View, Text, TextInput, Image, Label, StyleSheet, TouchableHighlight} from 'react-native'
 import {Actions} from 'react-native-router-flux'
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
-import store from 'react-native-simple-store'
+
 import styles from '../styles/signup'
 import buttonRounded from '../styles/buttonRounded'
 import ButtonRounded from '../widgets/ButtonRounded'
@@ -31,11 +31,6 @@ export default class Signup extends React.Component {
     .done();
   }
 
-  logIn() {
-    store
-    .save('profile_data', {username: 'Mad Max', email: 'madmax@gmail.com', phoneNo: '+1 215 879 39 38', address: 'West Lake'}).then(() => Actions.home());
-  }
-
   render() {
     return (
       <View style={styles.container}>
@@ -56,6 +51,14 @@ export default class Signup extends React.Component {
             <AnimInput
               style={styles.input}
               iconClass={FontAwesomeIcon}
+              iconName={'envelope'}
+              iconColor={'white'}
+              iconBackgroundColor={'#f2a59d'}
+              inputStyle={{ color: '#464949' }}
+            />
+            <AnimInput
+              style={styles.input}
+              iconClass={FontAwesomeIcon}
               iconName={'lock'}
               iconColor={'white'}
               iconBackgroundColor={'#f2a59d'}
@@ -65,11 +68,11 @@ export default class Signup extends React.Component {
           </View>
           <View style={styles.buttons}>
             <View style={styles.button}>
-              <ButtonRounded text="Log in" style={buttonRounded.loginButton} onPress={this.logIn} />
+              <ButtonRounded text="Signup" style={buttonRounded.loginButton} onPress={()=>Actions.hive_data()} />
             </View>
             <View style={styles.buttonBottom}>
-              <Text style={styles.textInput}>Don't have an account?</Text>
-              <Text style={{color: '#fff'}} onPress={()=>Actions.signup()}>Sign up</Text>
+              <Text style={styles.textInput}>Already have an account?</Text>
+              <Text style={{color: '#fff'}} onPress={()=>Actions.login()}>Log in</Text>
             </View>
           </View>
           <View style={styles.remainings}>

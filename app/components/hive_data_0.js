@@ -4,7 +4,7 @@ import {Badge} from 'native-base'
 import {View, ScrollView, Text, TextInput, Image, Label, StyleSheet, TouchableHighlight} from 'react-native'
 import {Actions} from 'react-native-router-flux'
 import Icon from 'react-native-vector-icons/FontAwesome'
-import ModalDropdown from 'react-native-modal-dropdown'
+
 import styles from '../styles/hive_data'
 import buttonRounded from '../styles/buttonRounded'
 import ButtonRounded from '../widgets/ButtonRounded'
@@ -72,13 +72,26 @@ export default class HiveData extends React.Component {
     const width = 450;
 
     var hiveTitles = ['Hive 01', 'Hive 02', 'Add a hive'];
+    var hiveOption = hiveTitles.map(function(title){
+                      return <Option>{title}</Option>;
+                    })
 
     return (
       <View style={styles.container}>
         <Image style={styles.bg} resizeMode='stretch'>
           <View style={styles.header}>
             <View style={styles.headerLeft}>
-              <ModalDropdown options={hiveTitles} />
+              // <Icon name="envelope-o" size={20} color="#0045ff">
+              //   <Text style={styles.headerLeftText}>Hive</Text>
+              // </Icon>
+              <Select
+                width={250}
+                ref="SELECT1"
+                optionListRef={this._getOptionList.bind(this)}
+                defaultValue="Hives"
+                onSelect={this._hive.bind(this)}>
+                {hiveOption}
+              </Select>
             </View>
             <View style={styles.headerRight}>
               <Icon name="inbox" class="badge" size={20} color="#0045ff">

@@ -16,11 +16,12 @@ module.exports = StyleSheet.create({
 		width: deviceWidth,
 		height: deviceHeight,
 		alignItems: 'center',
-		justifyContent: 'center'
+		justifyContent: 'center',
 	},
 	bg: {
 		width: deviceWidth,
-		height: deviceHeight
+		height: deviceHeight,
+		backgroundColor: '#333333'
 	},
 	logo: {
 		flexGrow: 1.2,
@@ -37,28 +38,33 @@ module.exports = StyleSheet.create({
 		flexGrow: 0.4,
 		flexDirection: 'column',
 		alignItems: 'center',
-		// backgroundColor: '#334422'
+		marginTop: 100,
+		backgroundColor: 'transparent'
+		// backgroundColor: '#fff'
 	},
 	titleText: {
-		fontSize: 26,
-		fontWeight: '500',
-		marginTop: 14
+		fontSize: 40,
+		fontWeight: '600',
+		marginTop: 14,
+		color: '#fff'
 	},
 	subtitleText: {
 		fontSize: 24,
-		fontWeight: '400',
-		fontStyle: 'italic',
-		marginTop: 14
+		fontWeight: '600',
+		marginTop: 14,
+		color: '#fff'
 	},
 	info: {
-		flexGrow: 0.4,
+		flexGrow: 0.6,
 		flexDirection: 'column',
 		alignItems: 'center',
+		marginTop: 30,
 		justifyContent: 'center',
 		// backgroundColor: '#ff0033',
 	},
 	input: {
-		width: 280,
+		width: 260,
+		// height: 40,
 		marginBottom: 40
 	},
 	buttons: {
@@ -69,48 +75,31 @@ module.exports = StyleSheet.create({
 		justifyContent: 'center',
 		// backgroundColor: '#44ee55'
 	},
-	buttonTop: {
-		flexGrow: 3,
-		flexDirection: 'row',
-		width: 280,
-		alignItems: 'center',
-	},
-	buttonTopLeft: {
-		flexGrow: 5,
-		flexDirection: 'row',
-		// alignItems: 'flex-start'
-	},
-	check: {
-		backgroundColor: '#0045ff',
-		color: '#fff',
-		borderRadius: 5,
-	},
-	buttonTopRight: {
-		flexGrow: 5,
-		alignItems: 'flex-end',
-	},
-	forgotPassword: {
-		color: '#0045ff'
-	},
 	button: {
-		flexGrow: 3,
+		flexGrow: 2,
 	},
 	buttonBottom: {
 		flexGrow: 3,
-		width: 280,
-		alignItems: 'flex-start'
-	},
-	registerText: {
-		color: '#0045ff',
+		flexDirection: 'row',
+		width: 250,
+		alignItems: 'center',
+		backgroundColor: 'transparent'
 	},
 	textInput: {
 		color: '#fff',
-		marginLeft: 50,
-		marginRight: 50,
-		height: 55,
+		marginLeft: 25,
+		marginRight: 0,
 		textAlign: 'center'
 	},
 	remainings: {
 		flexGrow: 4,
+	},
+	bottomText: {
+		textAlign: 'center',
+		position: 'absolute',
+		bottom: 20,
+		left: 50,
+		backgroundColor: 'transparent',
+		color: '#fff'
 	}
 });

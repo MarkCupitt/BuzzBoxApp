@@ -37,7 +37,7 @@ export default class AnimInput extends BaseInput {
   static defaultProps = {
     iconColor: 'white',
     iconBackgroundColor: '#899dda',
-    height: 32,
+    height: 42,
     animationDuration: 200,
   };
 
@@ -49,6 +49,7 @@ export default class AnimInput extends BaseInput {
       iconBackgroundColor,
       style: containerStyle,
       inputStyle,
+      passwordStyle,
       height: inputHeight,
     } = this.props;
     const {
@@ -85,6 +86,7 @@ export default class AnimInput extends BaseInput {
         <TextInput
           ref="input"
           {...this.props}
+          password={passwordStyle}
           style={[styles.textInput, inputStyle]}
           value={value}
           onBlur={this._onBlur}
@@ -107,7 +109,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 0,
     color: 'white',
-    backgroundColor: 'gray',
-    fontSize: 18,
+    backgroundColor: 'white',
+    fontSize: 24,
   },
 });

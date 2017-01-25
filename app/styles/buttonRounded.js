@@ -24,12 +24,12 @@ module.exports = StyleSheet.create({
 		shadowRadius: 3
 	},
 	loginButton: {
-		backgroundColor: '#0045ff',
+		backgroundColor: '#bdbdbd',
 	    padding: 10,
-	    borderColor: '#0045ff',
+	    borderColor: '#bdbdbd',
 	    borderWidth: 1,
 		borderRadius: 5,
-		width: 280,
+		width: 250,
 		height: 46,
 		marginTop: 5,
 		marginLeft: 10,
@@ -135,11 +135,70 @@ module.exports = StyleSheet.create({
 		shadowOpacity: 0.2,
 		shadowRadius: 3
 	},
+	allgoodButton: {
+		backgroundColor: '#7fb33b',
+	    padding: 5,
+	    borderColor: '#7fb33b',
+	    borderWidth: 1,
+		borderRadius: 5,
+		width: 60,
+		height: 25,
+		marginTop: 5,
+		marginLeft: 10,
+		marginRight: 10,
+		shadowColor: '#000',
+		shadowOffset: {width: 1, height: 2},
+		shadowOpacity: 0.2,
+		shadowRadius: 3
+	},
+	preswarmButton: {
+		backgroundColor: '#f2c94c',
+	    padding: 5,
+	    borderColor: '#f2c94c',
+	    borderWidth: 1,
+		borderRadius: 5,
+		width: 80,
+		height: 25,
+		marginTop: 5,
+		marginLeft: 10,
+		marginRight: 10,
+		shadowColor: '#000',
+		shadowOffset: {width: 1, height: 2},
+		shadowOpacity: 0.2,
+		shadowRadius: 3
+	},
+	infoButton: {
+		backgroundColor: '#fff',
+	    borderColor: '#fff',
+	    borderWidth: 1,
+		borderRadius: 12,
+		width: 12,
+		height: 12,
+		marginTop: 10,
+		marginLeft: 5,
+		marginRight: 5,
+		shadowColor: '#000',
+		shadowOffset: {width: 1, height: 2},
+		shadowOpacity: 0.2,
+		shadowRadius: 1
+	},
 	buttonText: {
 		color: '#fff',
 		alignSelf: 'center',
 		fontSize: 14,
 		fontWeight: '600'
+	},
+	stateText: {
+		color: '#fff',
+		alignSelf: 'center',
+		fontSize: 12,
+		fontWeight: '400'
+	},
+	infoText: {
+		color: '#000',
+		alignSelf: 'center',
+		fontSize: 8,
+		fontWeight: '100'
 	}
 });
 

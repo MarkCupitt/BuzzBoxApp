@@ -4,16 +4,36 @@ export function incInit() {
   return {type: types.INC_INIT};
 };
 
+export function incSignup() {
+  return {type: types.INC_SIGNUP};
+};
+
 export function incLogin() {
   return {type: types.INC_LOGIN};
 };
 
-export function incRegisterUser() {
-  return {type: types.INC_REGISTER_USER};
+export function incHome() {
+  return {type: types.INC_HOME};
 };
 
-export function incRegisterHive() {
-  return {type: types.INC_REGISTER_HIVE};
+export function incDashboard() {
+  return {type: types.INC_DASHBOARD};
+};
+
+export function incBzzboxStateGraph() {
+  return {type: types.INC_BZZBOX_STATE_GRAPH};
+};
+
+export function incActivity() {
+  return {type: types.INC_ACTIVITY};
+};
+
+export function incSettings() {
+  return {type: types.INC_SETTINGS};
+};
+
+export function incAddHive() {
+  return{type: types.INC_ADD_HIVE};
 };
 
 export function incEvents() {
